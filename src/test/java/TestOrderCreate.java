@@ -1,10 +1,10 @@
-import io.restassured.response.ValidatableResponse;
 import helpers.OrderChecks;
 import helpers.OrderClient;
-import pojo.OrderCreate;
+import io.restassured.response.ValidatableResponse;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import pojo.OrderCreate;
 
 import static org.junit.Assert.assertNotEquals;
 
