@@ -1,9 +1,9 @@
-package helpers.Order;
+package helpers.order;
 
 import helpers.Client;
 import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
-import pojo.Order.OrderCreate;
+import pojo.order.OrderCreate;
 
 public class OrderClient extends Client {
 

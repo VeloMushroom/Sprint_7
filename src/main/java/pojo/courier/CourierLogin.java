@@ -1,4 +1,4 @@
-package pojo.Courier;
+package pojo.courier;
 
 public class CourierLogin {
     private String login;

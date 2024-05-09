@@ -1,4 +1,4 @@
-package pojo.Order;
+package pojo.order;
 
 public class Order {
     private int id;

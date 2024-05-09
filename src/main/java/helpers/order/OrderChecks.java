@@ -1,8 +1,8 @@
-package helpers.Order;
+package helpers.order;
 
 import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
-import pojo.Order.Order;
+import pojo.order.Order;
 
 import java.net.HttpURLConnection;
 import java.util.List;

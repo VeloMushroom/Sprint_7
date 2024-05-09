@@ -1,4 +1,4 @@
-package pojo.Courier;
+package pojo.courier;
 
 import org.apache.commons.lang3.RandomStringUtils;
 

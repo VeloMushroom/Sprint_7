@@ -1,9 +1,14 @@
-import helpers.Order.*;
+import com.github.javafaker.Faker;
+import com.github.javafaker.service.FakeValuesService;
+import com.github.javafaker.service.RandomService;
+import helpers.order.*;
 import io.restassured.response.ValidatableResponse;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import pojo.Order.OrderCreate;
+import pojo.order.OrderCreate;
+
+import java.util.Locale;
 
 import static org.junit.Assert.assertNotEquals;
 
@@ -22,6 +27,7 @@ public class TestOrderCreate {
     private final String deliveryDate;
     private final String comment;
     private final String[] color;
+    static Faker faker = new Faker();
 
     public TestOrderCreate(String firstName, String lastName, String address, int metroStation, String phone, int rentTime, String deliveryDate, String comment, String[] color) {
         this.firstName = firstName;
@@ -39,10 +45,10 @@ public class TestOrderCreate {
     @Parameterized.Parameters
     public static Object[][] getOrderData() {
         return new Object[][]{
-                {"имя_" + OrderRandomValues.orderRandom(), "фамилия_" + OrderRandomValues.orderRandom(), "адрес_" + OrderRandomValues.orderRandom(), 0, "01234567890", 1, "2024-06-10", "комментарий_" + OrderRandomValues.orderRandom(), new String[]{"BLACK"}},
-                {"имя_" + OrderRandomValues.orderRandom(), "фамилия_" + OrderRandomValues.orderRandom(), "адрес_" + OrderRandomValues.orderRandom(), 1, "01234567891", 2, "2024-06-11", "комментарий_" + OrderRandomValues.orderRandom(), new String[]{"GRAY"}},
-                {"имя_" + OrderRandomValues.orderRandom(), "фамилия_" + OrderRandomValues.orderRandom(), "адрес_" + OrderRandomValues.orderRandom(), 2, "01234567892", 3, "2024-06-12", "комментарий_" + OrderRandomValues.orderRandom(), new String[]{"BLACK", "GRAY"}},
-                {"имя_" + OrderRandomValues.orderRandom(), "фамилия_" + OrderRandomValues.orderRandom(), "адрес_" + OrderRandomValues.orderRandom(), 3, "01234567893", 4, "2024-06-13", "комментарий_" + OrderRandomValues.orderRandom(), new String[]{}}
+                {"имя_" + faker.name().firstName(), "фамилия_" + faker.name().lastName(), "адрес_" + faker.address().cityName(), 0, faker.phoneNumber().phoneNumber(), 1, "2024-06-10", "комментарий_" + faker.harryPotter().quote(), new String[]{"BLACK"}},
+                {"имя_" + faker.name().firstName(), "фамилия_" + faker.name().lastName(), "адрес_" + faker.address().cityName(), 1, faker.phoneNumber().phoneNumber(), 2, "2024-06-11", "комментарий_" + faker.witcher().quote(), new String[]{"GRAY"}},
+                {"имя_" + faker.name().firstName(), "фамилия_" + faker.name().lastName(), "адрес_" + faker.address().cityName(), 2, faker.phoneNumber().phoneNumber(), 3, "2024-06-12", "комментарий_" + faker.zelda().character(), new String[]{"BLACK", "GRAY"}},
+                {"имя_" + faker.name().firstName(), "фамилия_" + faker.name().lastName(), "адрес_" + faker.address().cityName(), 3, faker.phoneNumber().phoneNumber(), 4, "2024-06-13", "комментарий_" + faker.yoda().quote(), new String[]{}}
         };
     }
 
