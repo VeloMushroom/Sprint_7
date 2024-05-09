@@ -1,7 +1,6 @@
 package pojo.courier;
 
 import org.apache.commons.lang3.RandomStringUtils;
-
 import java.time.LocalDateTime;
 
 public class CourierCreate {

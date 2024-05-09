@@ -5,7 +5,6 @@ import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
 import pojo.courier.CourierCreate;
 import pojo.courier.CourierLogin;
-
 import java.util.Map;
 
 public class CourierClient extends Client {

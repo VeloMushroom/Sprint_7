@@ -1,14 +1,10 @@
 import com.github.javafaker.Faker;
-import com.github.javafaker.service.FakeValuesService;
-import com.github.javafaker.service.RandomService;
 import helpers.order.*;
 import io.restassured.response.ValidatableResponse;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import pojo.order.OrderCreate;
-
-import java.util.Locale;
 
 import static org.junit.Assert.assertNotEquals;
 
