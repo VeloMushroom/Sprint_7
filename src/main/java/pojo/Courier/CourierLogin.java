@@ -1,4 +1,4 @@
-package pojo;
+package pojo.Courier;
 
 public class CourierLogin {
     private String login;

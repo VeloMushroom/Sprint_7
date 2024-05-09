@@ -1,8 +1,9 @@
-package helpers;
+package helpers.Order;
 
+import helpers.Client;
 import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
-import pojo.OrderCreate;
+import pojo.Order.OrderCreate;
 
 public class OrderClient extends Client {
 
@@ -22,5 +23,4 @@ public class OrderClient extends Client {
                 .get("orders")
                 .then().log().all();
     }
-
 }

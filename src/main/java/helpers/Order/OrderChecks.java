@@ -1,8 +1,8 @@
-package helpers;
+package helpers.Order;
 
 import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
-import pojo.Order;
+import pojo.Order.Order;
 
 import java.net.HttpURLConnection;
 import java.util.List;
@@ -15,20 +15,16 @@ public class OrderChecks {
                 .assertThat()
                 .statusCode(HttpURLConnection.HTTP_CREATED)
                 .extract()
-                .path("track")
-                ;
+                .path("track");
 
     }
+
     @Step("Check orders get")
     public List<Order> checkSuccessGetOrders(ValidatableResponse getOrdersResponse){
          return  getOrdersResponse
                 .assertThat()
                 .statusCode(HttpURLConnection.HTTP_OK)
                 .extract()
-                .path("orders")
-        ;
-
-
+                .path("orders");
     }
-
 }

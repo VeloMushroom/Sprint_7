@@ -1,9 +1,9 @@
-import helpers.OrderChecks;
-import helpers.OrderClient;
+import helpers.Order.OrderChecks;
+import helpers.Order.OrderClient;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.junit.Test;
-import pojo.Order;
+import pojo.Order.Order;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package helpers;
+package helpers.Courier;
 
 import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;

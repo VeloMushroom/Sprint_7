@@ -1,10 +1,9 @@
-import helpers.OrderChecks;
-import helpers.OrderClient;
+import helpers.Order.*;
 import io.restassured.response.ValidatableResponse;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import pojo.OrderCreate;
+import pojo.Order.OrderCreate;
 
 import static org.junit.Assert.assertNotEquals;
 
@@ -36,13 +35,14 @@ public class TestOrderCreate {
         this.color = color;
     }
 
+
     @Parameterized.Parameters
     public static Object[][] getOrderData() {
         return new Object[][]{
-                {"имя", "фамилия", "адрес", 0, "01234567890", 1, "2024-06-10", "комментарий", new String[]{"BLACK"}},
-                {"имя0", "фамилия0", "адрес0", 1, "01234567891", 2, "2024-06-11", "комментарий0", new String[]{"GRAY"}},
-                {"имя1", "фамилия1", "адрес1", 2, "01234567892", 3, "2024-06-12", "комментарий1", new String[]{"BLACK", "GRAY"}},
-                {"имя2", "фамилия2", "адрес2", 3, "01234567893", 4, "2024-06-13", "комментарий2", new String[]{}}
+                {"имя_" + OrderRandomValues.orderRandom(), "фамилия_" + OrderRandomValues.orderRandom(), "адрес_" + OrderRandomValues.orderRandom(), 0, "01234567890", 1, "2024-06-10", "комментарий_" + OrderRandomValues.orderRandom(), new String[]{"BLACK"}},
+                {"имя_" + OrderRandomValues.orderRandom(), "фамилия_" + OrderRandomValues.orderRandom(), "адрес_" + OrderRandomValues.orderRandom(), 1, "01234567891", 2, "2024-06-11", "комментарий_" + OrderRandomValues.orderRandom(), new String[]{"GRAY"}},
+                {"имя_" + OrderRandomValues.orderRandom(), "фамилия_" + OrderRandomValues.orderRandom(), "адрес_" + OrderRandomValues.orderRandom(), 2, "01234567892", 3, "2024-06-12", "комментарий_" + OrderRandomValues.orderRandom(), new String[]{"BLACK", "GRAY"}},
+                {"имя_" + OrderRandomValues.orderRandom(), "фамилия_" + OrderRandomValues.orderRandom(), "адрес_" + OrderRandomValues.orderRandom(), 3, "01234567893", 4, "2024-06-13", "комментарий_" + OrderRandomValues.orderRandom(), new String[]{}}
         };
     }
 

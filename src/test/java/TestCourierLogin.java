@@ -1,12 +1,12 @@
-import helpers.CourierChecks;
-import helpers.CourierClient;
+import helpers.Courier.CourierChecks;
+import helpers.Courier.CourierClient;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.After;
 import org.junit.Test;
-import pojo.CourierCreate;
-import pojo.CourierLogin;
+import pojo.Courier.CourierCreate;
+import pojo.Courier.CourierLogin;
 
 import static constants.Messаges.*;
 import static org.junit.Assert.assertNotEquals;

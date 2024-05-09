@@ -1,30 +1,36 @@
-package pojo;
+package pojo.Order;
 
-public class OrderCreate {
+public class Order {
+    private int id;
+    private int courierId;
     private String firstName;
     private String lastName;
     private String address;
-    private int metroStation;
+    private String metroStation;
     private String phone;
     private int rentTime;
     private String deliveryDate;
-    private String comment;
+    private int track;
     private String[] color;
+    private String comment;
+    private String createdAt;
+    private String updatedAt;
+    private String status;
 
-
-    public OrderCreate(String firstName, String lastName, String address, int metroStation, String phone, int rentTime, String deliveryDate, String comment, String[] color) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.address = address;
-        this.metroStation = metroStation;
-        this.phone = phone;
-        this.rentTime = rentTime;
-        this.deliveryDate = deliveryDate;
-        this.comment = comment;
-        this.color = color;
+    public int getId() {
+        return id;
     }
 
-    public OrderCreate() {
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getCourierId() {
+        return courierId;
+    }
+
+    public void setCourierId(int courierId) {
+        this.courierId = courierId;
     }
 
     public String getFirstName() {
@@ -51,11 +57,11 @@ public class OrderCreate {
         this.address = address;
     }
 
-    public int getMetroStation() {
+    public String getMetroStation() {
         return metroStation;
     }
 
-    public void setMetroStation(int metroStation) {
+    public void setMetroStation(String metroStation) {
         this.metroStation = metroStation;
     }
 
@@ -83,12 +89,12 @@ public class OrderCreate {
         this.deliveryDate = deliveryDate;
     }
 
-    public String getComment() {
-        return comment;
+    public int getTrack() {
+        return track;
     }
 
-    public void setComment(String comment) {
-        this.comment = comment;
+    public void setTrack(int track) {
+        this.track = track;
     }
 
     public String[] getColor() {
@@ -97,5 +103,37 @@ public class OrderCreate {
 
     public void setColor(String[] color) {
         this.color = color;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    public String getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public String getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

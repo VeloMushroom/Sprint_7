@@ -1,9 +1,10 @@
-package helpers;
+package helpers.Courier;
 
+import helpers.Client;
 import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
-import pojo.CourierCreate;
-import pojo.CourierLogin;
+import pojo.Courier.CourierCreate;
+import pojo.Courier.CourierLogin;
 
 import java.util.Map;
 

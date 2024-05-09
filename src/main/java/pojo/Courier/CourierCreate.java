@@ -1,6 +1,8 @@
-package pojo;
+package pojo.Courier;
 
 import org.apache.commons.lang3.RandomStringUtils;
+
+import java.time.LocalDateTime;
 
 public class CourierCreate {
     private String login;
@@ -18,7 +20,7 @@ public class CourierCreate {
 
 
     public static CourierCreate random() {
-        return new CourierCreate(RandomStringUtils.randomAlphabetic(5, 15), "Mushroom", "Ivan");
+        return new CourierCreate("Ivan" + RandomStringUtils.randomAlphabetic(5, 15), "Mushroom" + LocalDateTime.now(), "Ivan");
     }
 
     public String getLogin() {
